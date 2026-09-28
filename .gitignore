@@ -1,0 +1,41 @@
+# Environment & secrets
+.env
+.env.local
+.env*.local
+serviceAccountKey.json
+backend/serviceAccountKey.json
+backend/.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Node
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+
+# Models cache
+/tmp/models/
+backend/tmp/
+
+# IDE & OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*

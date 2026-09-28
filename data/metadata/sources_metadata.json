@@ -1,0 +1,59 @@
+{
+  "datasets": [
+    {
+      "source_name": "NOAA Climate Prediction Center / Physical Sciences Laboratory",
+      "source_url": "https://psl.noaa.gov/data/correlation/oni.data",
+      "download_date": "2026-09-20",
+      "coverage_period": "1950 - present (subset 2009 - 2023 for panel alignment)",
+      "variables": [
+        {
+          "name": "oni_index",
+          "full_name": "Oceanic Niño Index",
+          "units": "°C (Sea Surface Temperature anomaly)",
+          "definition": "3-month running mean of ERSST.v5 SST anomalies in the Niño 3.4 region (5°N–5°S, 120°–170°W)."
+        }
+      ],
+      "license_usage_notes": "Public domain (US Government work / NOAA NCEI open data)",
+      "processing_notes": "Parsed from monthly fixed-width table, filtered to panel observation years, aggregated to annual calendar-year mean."
+    },
+    {
+      "source_name": "Open-Meteo Historical Weather Archive API (ECMWF ERA5 / IMD reanalysis)",
+      "source_url": "https://archive-api.open-meteo.com/v1/archive",
+      "download_date": "2026-09-20",
+      "coverage_period": "2009 - 2023",
+      "variables": [
+        {
+          "name": "rainfall_mm",
+          "full_name": "Annual Precipitation Sum",
+          "units": "millimeters (mm)",
+          "definition": "Sum of daily precipitation at geographic centroids of Indian agricultural states."
+        },
+        {
+          "name": "avg_temperature_c",
+          "full_name": "Annual Mean Temperature",
+          "units": "°C",
+          "definition": "Average 2-meter air temperature over the calendar year."
+        }
+      ],
+      "license_usage_notes": "Open-Meteo API Terms: Open database license (ODbL) / ECMWF ERA5 Copernicus",
+      "processing_notes": "Queried per state centroid coordinates with Asia/Kolkata timezone, daily readings aggregated to annual sums/means."
+    },
+    {
+      "source_name": "Reserve Bank of India (RBI) & MoSPI Directorate of Economics and Statistics",
+      "source_url": "https://rbi.org.in/scripts/AnnualPublications.aspx?head=Handbook+of+Statistics+on+Indian+States",
+      "download_date": "2026-09-20",
+      "coverage_period": "2009 - 2023",
+      "variables": [
+        {
+          "name": "agricultural_gva_cr",
+          "alias": "agricultural_gdp_cr",
+          "full_name": "Gross State Value Added (GSVA) from Agriculture, Forestry and Fishing at Constant Prices",
+          "units": "₹ Crore (Base Year 2011-12)",
+          "definition": "Official state-level agricultural economic output measure. Measured at constant prices to eliminate price inflation distortions."
+        }
+      ],
+      "license_usage_notes": "National Data Sharing and Accessibility Policy (NDSAP) / Government of India open data",
+      "processing_notes": "Standardized across state reclassifications and price base shifts. Linked on (state, year) with meteorological observations."
+    }
+  ]
+}
